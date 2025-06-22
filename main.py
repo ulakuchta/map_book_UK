@@ -32,7 +32,6 @@ def add_user():
     zmienna_miejscowosc=entry_location.get()
     zmienna_post=entry_posts.get()
     user= User(name=zmienna_imie,surname=zmienna_nazwisko,location=zmienna_miejscowosc,post=zmienna_post)
-    user = User(name="John", surname="Smith", location="Warszawa", post="Tomato")
     users.append(user)
 
     entry_name.delete(0,END)
@@ -73,7 +72,7 @@ def edit_user():
 
     button_dodaj_obiekt.config(text='Zapisz',command=lambda: update_user(i))
 
-def update_user():
+def update_user(i):
     new_name=entry_name.get()
     new_surname=entry_surname.get()
     new_location=entry_location.get()
